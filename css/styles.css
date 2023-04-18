@@ -1,0 +1,136 @@
+
+/** CUSTOM PROPERTIES **/
+
+:root {
+    --colorPrimario:  rgb(245,214,200);
+    --colorSecundario: rgb(247, 195, 172);
+    --colorDark:  rgb(73,25,2);
+}
+
+/** GLOBALES **/
+
+img {
+    max-width: 100%;
+}
+
+p {
+    padding: 0 10px;
+}
+
+body {
+    background-image: url(../assets/img/wallpaper-wishlist.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: small;
+    color: var(--colorDark);
+    border: 1px solid var(--colorDark);
+    margin-right: 5px;
+    padding: 0 5px;
+}
+
+button {
+    background: var(--colorPrimario);
+    border: 2px solid var(--colorDark);
+    color:  var(--colorDark);
+    box-shadow: 1px 2px 3px #ccc;
+    transition: all .3s ease;
+}
+
+button:hover {
+    background: var(--colorSecundario);
+    box-shadow: 1px 2px 3px rgba(73, 24, 2, 0.503) inset;
+}
+
+
+.title {
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 1px solid #ccc;
+    background: rgba(245,214,200, .7);
+}
+
+.container {
+    width: 90%;
+    height: 80vh;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 10px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-form {
+    width: 100%;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
+    margin-top: 15px;
+}
+
+.form label,
+.form input {
+    margin-bottom: 10px;
+}
+
+.container-wishlist {
+    margin-top: 45px;
+    border-top: 1px solid var(--colorDark);
+    width: 100%;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 15fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    font-style: italic;
+}
+
+.container-wishlist::-webkit-scrollbar {
+    background:#fff;
+}
+
+.container-wishlist::-webkit-scrollbar-thumb {
+    background-color: var(--colorPrimario);
+}
+
+/** MEDIA QUERIES **/
+
+@media (min-width:634px){
+    .form {
+        flex-direction: row;
+    }
+
+    .form label,
+    .form input {
+        margin-bottom: 0px;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 800px) {
+    .container-form img {
+        display: none;
+    }
+    .form {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 75%;
+    }
+}
